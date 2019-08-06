@@ -104,7 +104,9 @@ EOREMARKUP
       throw new Exception(
         pht(
           'Object "%s" does not implement "%s", so transactions can not '.
-          'be loaded for it.'));
+	  'be loaded for it.',
+	  $object_name,
+	  'PhabricatorApplicationTransactionInterface'));
     }
 
     $xaction_query = PhabricatorApplicationTransactionQuery::newQueryForObject(
